@@ -16,7 +16,7 @@ double[] CreateArr(int length) // функция заполнения масси
     }
     return arr;
 }
-void PrintArr(int double [] arr) // функция вывода массива чтобы понимать что программа работает
+void PrintArr( double [] arr) // функция вывода массива чтобы понимать что программа работает
 {
     Console.Write(String.Join(",", arr));
 }
