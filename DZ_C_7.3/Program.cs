@@ -16,15 +16,16 @@ int[,] CreateMatrix(int rowCount, int columnCount, int min, int max)
     return array;
 }
 
+//int i = 0;
 
-double[] arr = new double[columnCount];
+//double[] arr = new double[columnCount]; 
 
 
 void PrintMatrix(int[,] array)
-{
+{    
     for (int row = 0; row < array.GetLength(0); row++)
     {
-        for (int column = 0; column < array.GetLength(1); column++)
+         for (int column = 0; column < array.GetLength(1); column++)
         {
             Console.Write($"{array[row, column]}\t");
         }
@@ -33,18 +34,23 @@ void PrintMatrix(int[,] array)
 }
 
 void Average(int[,] array)
-{
-    for (int row = 0; row < array.GetLength(0); row++)
-    {
-        int i = 0;
-        for (int column = 0; column < array.GetLength(1); column++)
+{   
+    int colums = array.GetLength(1);// переменная с кол вом столбцов
+    int rows = array.GetLength(0); // переменная с кол вом строк 
+    double [] arr = new double[colums]; // новый массив размером с кол во  столбцов
+
+    for (int column = 0; column < colums; column++)// цикл по столбцам 
+    {   
+        for (int row = 0; row < rows; row++) //цикл по строкам 
         {
 
-            arr[i] += array[row, column];
+            arr[column] += array[row, column]; // индекс столбца 
+            
         }
 
-        Console.WriteLine($"{arr[i] / rowCount}");
+        Console.WriteLine($"{Math.Round(arr[column]/ rows , 2)}");
     }
+    //Console.WriteLine($"{arr[i] / rowCount}");
 }
 int[,] matrix = CreateMatrix(rowCount, columnCount, 0, 10);
 PrintMatrix(matrix);
