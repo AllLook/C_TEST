@@ -45,10 +45,10 @@ int[,] Sorting(int[,] array)
                 if(array[row,column] < array[row,col]) // сравнение текущего и следующего
                 {
                    
-                   int temp = array[row,column] ;
-                   array[row,column] = array[row,col];
-                   array[row,col] = temp;
-                
+                   int temp = array[row,column] ; // текущий индекс во временную переменную
+                   array[row,column] = array[row,col]; // текущий  который добавляется в массив равен знач из условия
+                   array[row,col] = temp;// следующий стал текущим
+            
                 }
             }
         }

@@ -44,7 +44,7 @@ void Average(int[,] array)
         for (int row = 0; row < rows; row++) //цикл по строкам 
         {
 
-            arr[column] += array[row, column]; // индекс столбца 
+            arr[column] += array[row, column]; 
             
         }
 
