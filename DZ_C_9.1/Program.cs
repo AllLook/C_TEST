@@ -3,13 +3,13 @@ int N = 5;
 
 void PrintNum(int M, int N)
 {
-    if(M > N) 
-    return;
+    if (M > N)
+        return;
 
-   Console.Write($"{M} ");
+    Console.Write($"{M} ");
 
-   PrintNum(M + 1, N);
+    PrintNum(M + 1, N);
 
 }
 
-PrintNum(M,N);
+PrintNum(M, N);
